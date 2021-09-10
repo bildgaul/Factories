@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    interface GeometricShape
+    class Circle : GeometricShape
     {
-        void Draw();
+        public void Draw()
+        {
+            Console.WriteLine("Circle is drawn");
+        }
     }
 }

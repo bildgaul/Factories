@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    interface GeometricShape
+    class Rectangle : GeometricShape
     {
-        void Draw();
+        public void Draw()
+        {
+            Console.WriteLine("Rectangle is drawn");
+        }
     }
 }

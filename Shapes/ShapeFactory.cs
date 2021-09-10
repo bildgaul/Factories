@@ -10,18 +10,18 @@ namespace Shapes
     class ShapeFactory
     {
 
-        GeometricShape GetShape(ShapeType type)
+        public GeometricShape GetShape(ShapeType type)
         {
-            GeometricShape shape;
-            if (type == ShapeType.LINE)
-            {
-                shape = new Line();
+            switch (type){
+                case ShapeType.LINE:
+                    return new Line();
+                case ShapeType.CIRCLE:
+                    return new Circle();
+                case ShapeType.RECTANGLE:
+                    return new Rectangle();
+                default:
+                    return null;
             }
-            else
-            {
-                shape = null;
-            }
-            return shape;
         }
     }
 }
