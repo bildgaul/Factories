@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    enum ShapeType { Line, Circle, Rectangle, Triangle };
+    enum ShapeType { LINE, CIRCLE, RECTANGLE, TRIANGLE };
     class ShapeFactory
     {
 
         GeometricShape GetShape(ShapeType type)
         {
-            return new GeometricShape(type);
+            GeometricShape shape;
+            if (type == ShapeType.LINE)
+            {
+                shape = new Line();
+            }
+            else
+            {
+                shape = null;
+            }
+            return shape;
         }
     }
 }
